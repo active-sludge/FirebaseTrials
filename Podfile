@@ -6,5 +6,8 @@ target 'LoodosCase' do
   use_frameworks!
 
   # Pods for LoodosCase
-
+  pod 'Alamofire', '~> 5.2'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
 end
