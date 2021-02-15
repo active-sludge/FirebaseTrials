@@ -17,6 +17,9 @@
 		62E3052A25D99239002995AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E3052925D99239002995AC /* MainViewController.swift */; };
 		62E3052D25D99247002995AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E3052C25D99247002995AC /* DetailViewController.swift */; };
 		62E3053325D99827002995AC /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E3053225D99827002995AC /* NetworkMonitor.swift */; };
+		62FD4A8D25DA8CAF00719859 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A8C25DA8CAF00719859 /* Film.swift */; };
+		62FD4A9625DA961F00719859 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9525DA961F00719859 /* SearchResult.swift */; };
+		62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9825DAB5CB00719859 /* Loader.swift */; };
 		712D9F52F740F0CEB735805A /* Pods_LoodosCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		62E3052925D99239002995AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62E3052C25D99247002995AC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		62E3053225D99827002995AC /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		62FD4A8C25DA8CAF00719859 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		62FD4A9525DA961F00719859 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		62FD4A9825DAB5CB00719859 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BBE0C771BFFF74562776B0 /* Pods-LoodosCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosCase.release.xcconfig"; path = "Target Support Files/Pods-LoodosCase/Pods-LoodosCase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,9 +96,11 @@
 			children = (
 				62C5846B25D92BAF008C3725 /* Application */,
 				62C5847925D92DED008C3725 /* Controllers */,
+				62FD4A9B25DAB5D000719859 /* Helpers */,
+				62FD4A9225DA95EB00719859 /* Models */,
 				62C5847125D92C13008C3725 /* Resources */,
-				62E3053025D997F7002995AC /* Storyboards */,
 				62E3053625D9982E002995AC /* Services */,
+				62E3053025D997F7002995AC /* Storyboards */,
 			);
 			path = LoodosCase;
 			sourceTree = "<group>";
@@ -141,6 +149,23 @@
 				62E3053225D99827002995AC /* NetworkMonitor.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		62FD4A9225DA95EB00719859 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62FD4A8C25DA8CAF00719859 /* Film.swift */,
+				62FD4A9525DA961F00719859 /* SearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62FD4A9B25DAB5D000719859 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62FD4A9825DAB5CB00719859 /* Loader.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,10 +285,13 @@
 			files = (
 				62D511B925D9308B00AB9660 /* SplashViewController.swift in Sources */,
 				62E3053325D99827002995AC /* NetworkMonitor.swift in Sources */,
+				62FD4A9625DA961F00719859 /* SearchResult.swift in Sources */,
 				62ADD46925D8368A009A7156 /* AppDelegate.swift in Sources */,
 				62E3052D25D99247002995AC /* DetailViewController.swift in Sources */,
 				62ADD46B25D8368A009A7156 /* SceneDelegate.swift in Sources */,
 				62E3052A25D99239002995AC /* MainViewController.swift in Sources */,
+				62FD4A8D25DA8CAF00719859 /* Film.swift in Sources */,
+				62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

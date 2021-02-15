@@ -19,6 +19,7 @@ class SplashViewController: UIViewController {
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     
+    //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tryAgainButton.isHidden = true
@@ -26,8 +27,36 @@ class SplashViewController: UIViewController {
         checkInternetConnection()
     }
     
+    //MARK: - SplashViewController functions
     @IBAction private func tryAgainButtonTapped(_ sender: Any) {
         checkInternetConnection()
+    }
+    
+    private func displayWelcome() {
+        let welcomeMessage = remoteConfig[welcomeMessageConfigKey].stringValue
+        welcomeLabel.text = welcomeMessage
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+           self.performSegue(withIdentifier: "toMain", sender: self )
+        })
+    }
+        
+    private func checkInternetConnection() {
+        if networkMonitor.isConnectedToInternet() {
+            fetchConfig()
+            tryAgainButton.isHidden = true
+        } else {
+            welcomeLabel.text = "No internet connection"
+            tryAgainButton.isHidden = false
+        }
+    }
+    
+    //MARK: - RemoteConfig
+    private func setupRemoteConfig() {
+        remoteConfig = RemoteConfig.remoteConfig()
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 0
+        remoteConfig.configSettings = settings
+        //        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
     }
     
     private func fetchConfig() {
@@ -43,30 +72,6 @@ class SplashViewController: UIViewController {
                 print("Error: \(error?.localizedDescription ?? "No error available.")")
             }
             self.displayWelcome()
-        }
-    }
-    
-    private func displayWelcome() {
-        let welcomeMessage = remoteConfig[welcomeMessageConfigKey].stringValue
-        welcomeLabel.text = welcomeMessage
-    }
-    
-    
-    private func setupRemoteConfig() {
-        remoteConfig = RemoteConfig.remoteConfig()
-        let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 0
-        remoteConfig.configSettings = settings
-        //        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
-    }
-    
-    private func checkInternetConnection() {
-        if networkMonitor.isConnectedToInternet() {
-            fetchConfig()
-            tryAgainButton.isHidden = true
-        } else {
-            welcomeLabel.text = "No internet connection"
-            tryAgainButton.isHidden = false
         }
     }
     
