@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import Alamofire
 import Kingfisher
 
@@ -22,6 +23,15 @@ class MainTableViewController: UITableViewController {
         searchBar.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? DetailViewController else {
+            return
+        }
+        destinationVC.data = selectedFilm
+    }
+}
+//MARK: - UITableViewDelegate, UITableViewDataSource
+extension MainTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return films.count
     }
@@ -39,11 +49,10 @@ class MainTableViewController: UITableViewController {
         return indexPath
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? DetailViewController else {
-            return
-        }
-        destinationVC.data = selectedFilm
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemName: "\(String(describing: films[indexPath.row].title))"
+        ])
     }
 }
 
@@ -65,13 +74,13 @@ extension MainTableViewController: UISearchBarDelegate {
 
 // MARK: - Alamofire
 extension MainTableViewController {
-    fileprivate func showNoResponseAlert(with title: String) {
+    private func showNoResponseAlert(with title: String) {
         let alert = UIAlertController(title: "No Result!", message: "There is no result for '\(title)'.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Search something else", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func searchFilm(for title: String) {
+    private func searchFilm(for title: String) {
         let url = "http://www.omdbapi.com/?apikey=b8fe3979"
         let parameters: [String: String] = ["s": title]
         AF.request(url, parameters: parameters)

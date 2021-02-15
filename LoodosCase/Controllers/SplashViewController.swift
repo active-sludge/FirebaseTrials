@@ -36,10 +36,10 @@ class SplashViewController: UIViewController {
         let welcomeMessage = remoteConfig[welcomeMessageConfigKey].stringValue
         welcomeLabel.text = welcomeMessage
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-           self.performSegue(withIdentifier: "toMain", sender: self )
+            self.performSegue(withIdentifier: "toMain", sender: self )
         })
     }
-        
+    
     private func checkInternetConnection() {
         if networkMonitor.isConnectedToInternet() {
             fetchConfig()
@@ -56,7 +56,7 @@ class SplashViewController: UIViewController {
         let settings = RemoteConfigSettings()
         settings.minimumFetchInterval = 0
         remoteConfig.configSettings = settings
-        //        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
+        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
     }
     
     private func fetchConfig() {

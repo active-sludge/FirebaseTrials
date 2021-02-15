@@ -20,6 +20,8 @@
 		62FD4A8D25DA8CAF00719859 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A8C25DA8CAF00719859 /* Film.swift */; };
 		62FD4A9625DA961F00719859 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9525DA961F00719859 /* SearchResult.swift */; };
 		62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9825DAB5CB00719859 /* Loader.swift */; };
+		62FD4A9F25DABB3F00719859 /* ScaleOutSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */; };
+		62FD4AA525DAE5FF00719859 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62FD4AA425DAE5FF00719859 /* RemoteConfigDefaults.plist */; };
 		712D9F52F740F0CEB735805A /* Pods_LoodosCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		62FD4A8C25DA8CAF00719859 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		62FD4A9525DA961F00719859 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		62FD4A9825DAB5CB00719859 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleOutSegue.swift; sourceTree = "<group>"; };
+		62FD4AA425DAE5FF00719859 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BBE0C771BFFF74562776B0 /* Pods-LoodosCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosCase.release.xcconfig"; path = "Target Support Files/Pods-LoodosCase/Pods-LoodosCase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 				62C5847125D92C13008C3725 /* Resources */,
 				62E3053625D9982E002995AC /* Services */,
 				62E3053025D997F7002995AC /* Storyboards */,
+				62FD4AA125DABB4100719859 /* Segues */,
 			);
 			path = LoodosCase;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				62ADD46825D8368A009A7156 /* AppDelegate.swift */,
 				62ADD46A25D8368A009A7156 /* SceneDelegate.swift */,
 				62ADD47625D8368B009A7156 /* Info.plist */,
+				62FD4AA425DAE5FF00719859 /* RemoteConfigDefaults.plist */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -166,6 +172,14 @@
 				62FD4A9825DAB5CB00719859 /* Loader.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62FD4AA125DABB4100719859 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */,
+			);
+			path = Segues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62ADD47525D8368B009A7156 /* LaunchScreen.storyboard in Resources */,
+				62FD4AA525DAE5FF00719859 /* RemoteConfigDefaults.plist in Resources */,
 				62C5847325D92DA6008C3725 /* GoogleService-Info.plist in Resources */,
 				62ADD47225D8368B009A7156 /* Assets.xcassets in Resources */,
 				62ADD47025D8368A009A7156 /* Main.storyboard in Resources */,
@@ -292,6 +307,7 @@
 				62E3052A25D99239002995AC /* MainViewController.swift in Sources */,
 				62FD4A8D25DA8CAF00719859 /* Film.swift in Sources */,
 				62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */,
+				62FD4A9F25DABB3F00719859 /* ScaleOutSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

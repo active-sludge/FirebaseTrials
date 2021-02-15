@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,15 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="UkH-Sd-zcv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i84-sX-MYx">
                                 <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqv-h7-kFh">
-                                <rect key="frame" x="175" y="658.5" width="64" height="30"/>
-                                <state key="normal" title="Try Again"/>
+                                <rect key="frame" x="150" y="558.5" width="114" height="30"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="tryAgainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3P-ml-3jC"/>
                                 </connections>
@@ -33,21 +41,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Aqv-h7-kFh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="1Ve-nN-wnk"/>
+                            <constraint firstItem="UkH-Sd-zcv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BRx-Jm-DuX"/>
                             <constraint firstItem="i84-sX-MYx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RHs-nW-bUk"/>
+                            <constraint firstItem="UkH-Sd-zcv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WNf-bS-Ohq"/>
+                            <constraint firstItem="UkH-Sd-zcv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bc8-RP-P5Z"/>
+                            <constraint firstItem="Aqv-h7-kFh" firstAttribute="top" secondItem="i84-sX-MYx" secondAttribute="bottom" constant="100" id="ckG-UT-Ik8"/>
                             <constraint firstItem="i84-sX-MYx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dRv-8v-bze"/>
-                            <constraint firstItem="Aqv-h7-kFh" firstAttribute="top" secondItem="i84-sX-MYx" secondAttribute="bottom" constant="200" id="gSW-oN-9AR"/>
-                            <constraint firstItem="Aqv-h7-kFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTw-cj-40j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqv-h7-kFh" secondAttribute="trailing" constant="150" id="oCg-58-McW"/>
+                            <constraint firstAttribute="bottom" secondItem="UkH-Sd-zcv" secondAttribute="bottom" id="sOt-h8-9ei"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tryAgainButton" destination="Aqv-h7-kFh" id="n9J-4G-YqX"/>
                         <outlet property="welcomeLabel" destination="i84-sX-MYx" id="sYj-6l-sxg"/>
-                        <segue destination="Jhd-1e-8jR" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" id="MHg-LY-PwV"/>
+                        <segue destination="Jhd-1e-8jR" kind="presentation" identifier="toMain" customClass="ScaleOutSegue" customModule="LoodosCase" customModuleProvider="target" modalPresentationStyle="fullScreen" id="MHg-LY-PwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-235" y="104"/>
+            <point key="canvasLocation" x="-236.23188405797103" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a70-iO-eoz">
@@ -205,6 +218,13 @@
     </scenes>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
+        <image name="launchScreenImage" width="500" height="558.5"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
