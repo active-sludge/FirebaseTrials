@@ -22,6 +22,7 @@
 		62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9825DAB5CB00719859 /* Loader.swift */; };
 		62FD4A9F25DABB3F00719859 /* ScaleOutSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */; };
 		62FD4AA525DAE5FF00719859 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62FD4AA425DAE5FF00719859 /* RemoteConfigDefaults.plist */; };
+		62FD4AAF25DBB70800719859 /* DataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD4AAE25DBB70800719859 /* DataCellViewModel.swift */; };
 		712D9F52F740F0CEB735805A /* Pods_LoodosCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		62FD4A9825DAB5CB00719859 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleOutSegue.swift; sourceTree = "<group>"; };
 		62FD4AA425DAE5FF00719859 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		62FD4AAE25DBB70800719859 /* DataCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellViewModel.swift; sourceTree = "<group>"; };
 		AEA91FD7DD7D1A87509178F1 /* Pods_LoodosCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BBE0C771BFFF74562776B0 /* Pods-LoodosCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosCase.release.xcconfig"; path = "Target Support Files/Pods-LoodosCase/Pods-LoodosCase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				62E3053625D9982E002995AC /* Services */,
 				62E3053025D997F7002995AC /* Storyboards */,
 				62FD4AA125DABB4100719859 /* Segues */,
+				62FD4AB125DBB7CA00719859 /* ViewModels */,
 			);
 			path = LoodosCase;
 			sourceTree = "<group>";
@@ -180,6 +183,14 @@
 				62FD4A9E25DABB3F00719859 /* ScaleOutSegue.swift */,
 			);
 			path = Segues;
+			sourceTree = "<group>";
+		};
+		62FD4AB125DBB7CA00719859 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				62FD4AAE25DBB70800719859 /* DataCellViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				62ADD46925D8368A009A7156 /* AppDelegate.swift in Sources */,
 				62E3052D25D99247002995AC /* DetailViewController.swift in Sources */,
 				62ADD46B25D8368A009A7156 /* SceneDelegate.swift in Sources */,
+				62FD4AAF25DBB70800719859 /* DataCellViewModel.swift in Sources */,
 				62E3052A25D99239002995AC /* MainViewController.swift in Sources */,
 				62FD4A8D25DA8CAF00719859 /* Film.swift in Sources */,
 				62FD4A9925DAB5CB00719859 /* Loader.swift in Sources */,

@@ -84,7 +84,6 @@
         <!--LoodosCase-->
         <scene sceneID="nBm-1G-s0z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQK-F0-tbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="yiW-sI-GNS" customClass="MainTableViewController" customModule="LoodosCase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAD-8d-YLz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -138,13 +137,14 @@
                         <outlet property="searchBar" destination="ykf-S7-UnE" id="Bhy-1a-Ewc"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQK-F0-tbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1583" y="104"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="CYQ-oX-rcs">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="ac8-J8-dUg" customClass="DetailViewController" customModule="HepsiburadaCaseStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="ac8-J8-dUg" customClass="DetailViewController" customModule="LoodosCase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C05-Xu-RFs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

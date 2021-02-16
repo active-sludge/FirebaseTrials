@@ -38,9 +38,11 @@ extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
-        cell.textLabel?.text = films[indexPath.row].title
-        cell.detailTextLabel?.text = films[indexPath.row].year
-        cell.imageView?.kf.setImage(with: URL(string: films[indexPath.row].poster ?? ""), placeholder: UIImage(systemName: "film"))
+        let viewModel = DataCellViewModel(film: films[indexPath.row])
+        
+        cell.textLabel?.text = viewModel.title
+        cell.detailTextLabel?.text = viewModel.year
+        cell.imageView?.kf.setImage(with: URL(string: viewModel.poster ?? ""), placeholder: UIImage(systemName: "film"))
         return cell
     }
     
