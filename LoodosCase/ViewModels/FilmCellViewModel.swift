@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataCellViewModel {
+struct FilmCellViewModel {
     let title, year, poster: String?
     
     init(film: Film) {
@@ -15,5 +15,4 @@ struct DataCellViewModel {
         self.year = film.year
         self.poster = film.poster
     }
-    
 }

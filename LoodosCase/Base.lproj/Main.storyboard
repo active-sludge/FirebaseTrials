@@ -74,72 +74,44 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yiW-sI-GNS" kind="relationship" relationship="rootViewController" id="fRr-ga-oSb"/>
+                        <segue destination="alH-of-fCs" kind="relationship" relationship="rootViewController" id="GaJ-Qv-wqI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xN9-eM-TOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="710" y="104"/>
         </scene>
-        <!--LoodosCase-->
-        <scene sceneID="nBm-1G-s0z">
+        <!--Loodos-->
+        <scene sceneID="amN-fh-F8Y">
             <objects>
-                <tableViewController id="yiW-sI-GNS" customClass="MainTableViewController" customModule="LoodosCase" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAD-8d-YLz">
+                <viewController id="alH-of-fCs" customClass="MainViewController" customModule="LoodosCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xo-4B-fES">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-xb-kGw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TKC-qt-Zir"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Find starships by name or model" showsCancelButton="YES" id="ykf-S7-UnE">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="I4t-9j-LEH" detailTextLabel="RBJ-RA-tdn" imageView="r2B-ss-ckA" style="IBUITableViewCellStyleSubtitle" id="A2z-eo-mhD">
-                                <rect key="frame" x="0.0" y="84" width="414" height="55.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A2z-eo-mhD" id="arx-IO-6Ur">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I4t-9j-LEH">
-                                            <rect key="frame" x="59" y="10" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBJ-RA-tdn">
-                                            <rect key="frame" x="59" y="31.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="film" catalog="system" id="r2B-ss-ckA">
-                                            <rect key="frame" x="20" y="18.5" width="24" height="17.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ac8-J8-dUg" kind="show" id="unq-e3-g5n"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yiW-sI-GNS" id="y17-nK-58k"/>
-                            <outlet property="delegate" destination="yiW-sI-GNS" id="gsp-Qi-Bey"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="LoodosCase" id="2yf-5h-yu7"/>
+                        <constraints>
+                            <constraint firstItem="bJ7-xb-kGw" firstAttribute="top" secondItem="TKC-qt-Zir" secondAttribute="top" id="j4V-rl-bZG"/>
+                            <constraint firstItem="bJ7-xb-kGw" firstAttribute="trailing" secondItem="TKC-qt-Zir" secondAttribute="trailing" id="lL6-4B-Isb"/>
+                            <constraint firstItem="bJ7-xb-kGw" firstAttribute="leading" secondItem="TKC-qt-Zir" secondAttribute="leading" id="lQk-Wk-ZmK"/>
+                            <constraint firstItem="bJ7-xb-kGw" firstAttribute="bottom" secondItem="TKC-qt-Zir" secondAttribute="bottom" id="qTf-3K-uHy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loodos" id="gwM-IC-PMJ"/>
                     <connections>
-                        <outlet property="searchBar" destination="ykf-S7-UnE" id="Bhy-1a-Ewc"/>
+                        <outlet property="tableView" destination="bJ7-xb-kGw" id="vTY-VB-dfe"/>
+                        <segue destination="ac8-J8-dUg" kind="show" identifier="toDetailView" id="n7T-9R-Ozp"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQK-F0-tbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3QV-3L-Xcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="104"/>
+            <point key="canvasLocation" x="1608.6956521739132" y="103.79464285714285"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="CYQ-oX-rcs">
@@ -217,7 +189,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="film" catalog="system" width="128" height="93"/>
         <image name="launchScreenImage" width="500" height="558.5"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
