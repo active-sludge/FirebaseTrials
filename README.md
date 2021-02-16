@@ -2,9 +2,7 @@
 
 <br />
 <p align="center">
-  <a href="">
-    <img src="appIcon.png" alt="Logo" width="80" height="80">
-  </a>
+  <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-logo.png?raw=true" width="100" >
   
   <p align="center">
   This project was prepared as an interview case for iOS Developer position at Loodos.
@@ -17,9 +15,9 @@
   
   <p align="row">
     <p align="center">
-       <img src= "" width="300" >
-       <img src= "" width="300" >
-       <img src= "" width="300" >
+       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-1.gif?raw=true" width="300" >
+       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-2.gif?raw=true" width="300" >
+       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-3.gif" width="300" >
     </p>
   </p>
 </p>
