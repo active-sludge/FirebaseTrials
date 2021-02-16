@@ -14,5 +14,4 @@ class NetworkMonitor {
     func isConnectedToInternet() -> Bool {
             return NetworkReachabilityManager()?.isReachable ?? false
         }
-
 }

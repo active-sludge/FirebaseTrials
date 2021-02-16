@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     private var selectedFilm: Film?
     private let searchController = UISearchController(searchResultsController: nil)
     private let loader = Loader.instance
+    private let itemNumberToShow = 20
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -116,7 +117,6 @@ extension MainViewController: UISearchBarDelegate {
 
 // MARK: - Alamofire
 extension MainViewController {
-    
     private func searchFilm(for title: String) {
         let url = "http://www.omdbapi.com/?apikey=b8fe3979"
         let parameters: [String: String] = ["s": title]
@@ -124,11 +124,13 @@ extension MainViewController {
             .validate()
             .responseDecodable(of: SearchResult.self) { response in
                 self.loader.hideOverlayView(view: self.view)
-                guard let searchResult = response.value?.search else {
+                guard let searchResult = response.value else {
                     self.showNoResponseAlert(with: title)
                     return
                 }
-                self.films = searchResult
+                guard let films = searchResult.search else { return }
+                
+                self.films = films
                 self.tableView.reloadData()
             }
     }

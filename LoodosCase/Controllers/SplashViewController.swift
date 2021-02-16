@@ -73,7 +73,5 @@ class SplashViewController: UIViewController {
             }
             self.displayWelcome()
         }
-    }
-    
-    
+    }   
 }
