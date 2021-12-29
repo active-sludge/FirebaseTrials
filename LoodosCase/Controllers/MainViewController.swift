@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import Alamofire
 import Kingfisher
+import FirebaseAnalytics
 
 class MainViewController: UIViewController {
     
@@ -118,6 +119,9 @@ extension MainViewController: UISearchBarDelegate {
 // MARK: - Alamofire
 extension MainViewController {
     private func searchFilm(for title: String) {
+        Analytics.logEvent(AnalyticsEventSearch, parameters: [
+            AnalyticsParameterSearchTerm: title
+        ])
         let url = "http://www.omdbapi.com/?apikey=b8fe3979"
         let parameters: [String: String] = ["s": title]
         AF.request(url, parameters: parameters)

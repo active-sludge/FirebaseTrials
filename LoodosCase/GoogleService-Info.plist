@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>loodoscase-c2594.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:881791309682:ios:9fb5c60cc8ff879d0fafeb</string>
+	<key>DATABASE_URL</key>
+	<string>https://loodoscase-c2594-default-rtdb.europe-west1.firebasedatabase.app/</string>
 </dict>
 </plist>

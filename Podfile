@@ -7,7 +7,11 @@ target 'LoodosCase' do
 
   # Pods for LoodosCase
   pod 'Alamofire', '~> 5.2'
-  pod 'Kingfisher', '~> 6.0'
+  pod 'Kingfisher', '~> 7.0'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Crashlytics'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end

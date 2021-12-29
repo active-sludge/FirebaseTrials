@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  SplashViewController.swift
 //  LoodosCase
 //
 //  Created by Huseyin Can Dayan on 14.02.2021.
