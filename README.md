@@ -1,42 +1,25 @@
-# LoodosCase
+# SWE590 Term Project
 
-<br />
-<p align="center">
-  <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-logo.png?raw=true" width="100" >
-  
-  <p align="center">
-  This project was prepared as an interview case for iOS Developer position at Loodos.
-  The App contains three screen, which are splash, search and detail. It uses http://omdbapi.com/ as API. 
-  The splash screen will check internet connection. If connection is not detected, it does not proceed to the search page. Try again button will reveal.
-  In search page, keywords can be written and after pressing search related results will be displayed under. 
-  When clicked on a search result, detail page will be present. It will contain some details about the film. 
-  </p>
-  
-  
-  <p align="row">
-    <p align="center">
-       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-1.gif?raw=true" width="300" >
-       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-2.gif?raw=true" width="300" >
-       <img src= "https://github.com/active-sludge/LoodosCase/blob/main/loodos-gif-3.gif" width="300" >
-    </p>
-  </p>
-</p>
+Mobile development is very popular these days. However, firing up an app requires not only a front-end, also a robust back-end. With the power of emerging  cloud technologies, ready to use backend services and APIs are at the use of mobile developers. Google has developed a good amount of API to set up a full backend for any mobile app to use. These APIs include database, analytic tools, authentication, and much more. In this project, I will develop an iOS app to showcase some of these features of Firebase.
 
 
 ## Features
+• Analytics: Tracks what’s happening inside the app.
 
-- [x] Splash Screen
-- [x] Internet Connection Check
-- [x] Remote Config
-- [x] Custom Segue
-- [x] Movie Search
-- [x] Movie Detail Event
-- [x] Detail Page
+• Real Time Database: Basic database.
+
+• Firestore Database: Advanced database.
+
+• Remote Config: Change app behavior without a need of a release.
+
+• Authentication: User register and login.
+
+• Crashlytics: Crash data collections and metrics.
 
 ## Requirements
 
-- iOS 14.4
-- Xcode 12.4
+- iOS > 14.4
+- Xcode > 12.4
 
 ## External Library
 
