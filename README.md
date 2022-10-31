@@ -1,4 +1,4 @@
-# SWE590 Term Project
+# Firebase Trials
 
 Mobile development is very popular these days. However, firing up an app requires not only a front-end, also a robust back-end. With the power of emerging  cloud technologies, ready to use backend services and APIs are at the use of mobile developers. Google has developed a good amount of API to set up a full backend for any mobile app to use. These APIs include database, analytic tools, authentication, and much more. In this project, I will develop an iOS app to showcase some of these features of Firebase.
 
